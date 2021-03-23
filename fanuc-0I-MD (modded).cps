@@ -38,6 +38,8 @@ allowHelicalMoves = true;
 allowedCircularPlanes = undefined; // allow any circular motion
 highFeedrate = (unit == IN) ? 500 : 5000;
 
+
+// Note that certain default values have been changed. Sequence number, machine, preload
 // user-defined properties
 properties = {
   writeMachine: {
