@@ -3,7 +3,7 @@
   All rights reserved.
 
   Modded by: Rahul Sharma
-  $Date: 2021-03-23 15:48:10 $
+  $Date: 2021-03-24$
 
   FANUC post processor configuration.
 
@@ -357,6 +357,8 @@ var patternIsActive = false;
 var lastOperationComment = "";
 var incrementalSubprogram;
 probeMultipleFeatures = true;
+var now = new Date (); //Added date variable
+
 
 // used to convert blocks to optional for safeStartAllOperations, might get used outside of onSection
 var operationNeedsSafeStart = false;
@@ -506,14 +508,9 @@ function onOpen() {
       warning(localize("Program number is reserved by tool builder."));
     }
 
-    /**Added date. But not utilizing it. */
-    var d = new Date();
-
-    oFormat = createFormat({width:(getProperty("o8") ? 8 : 4), zeropad:true, decimals:0});
+      oFormat = createFormat({width:(getProperty("o8") ? 8 : 4), zeropad:true, decimals:0});
     if (programComment) {
-      writeln("O" + oFormat.format(programId) + "\n"+ "(" + 
-      /**filterText(String(programComment).toUpperCase(), permittedCommentChars) + ")" + "\n(" + d + ")" );*/
-      filterText(String(programComment).toUpperCase(), permittedCommentChars)+")");
+      writeln("O" + oFormat.format(programId) + "\n"+ "(" + filterText(String(programComment).toUpperCase(), permittedCommentChars)+")");
 
     } else {
       writeln("O" + oFormat.format(programId));
@@ -523,6 +520,10 @@ function onOpen() {
     error(localize("Program name has not been specified."));
     return;
   }
+
+  // Added time stamp
+  writeComment("Time Posted- " + now.getDate() + "-" + (now.getMonth()+1) + "-" + now.getFullYear() + ", " 
+              + now.getHours() + "." + ('0'+now.getMinutes()).slice(-2));
 
   // dump machine configuration
   var vendor = machineConfiguration.getVendor();
