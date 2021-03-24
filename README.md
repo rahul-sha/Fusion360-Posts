@@ -4,6 +4,7 @@ Very novice at JS, I just fiddled around. Try it at your own risk.
 
 For Fanuc 0i-MD, Here are the changes made to the generic fanuc post from Fusion 360 Library:
 - Program name in the next line.
+- Time Stamp for when the file is post.
 - Simplified Description of tool list.
 
 - Sequence numbers according to tool change. (Hopefully)
