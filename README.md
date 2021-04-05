@@ -1,5 +1,5 @@
 # Fusion360-Posts
-Collection of Posts I use in Fusion 360.
+Collection of Posts I use in Fusion 360. So far only have for fanuc 0i-MD.
 Very novice at JS, I just fiddled around. Try it at your own risk.
 
 For Fanuc 0i-MD, Here are the changes made to the generic fanuc post from Fusion 360 Library:
