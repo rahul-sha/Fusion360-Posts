@@ -13,7 +13,7 @@
   FORKID {04622D27-72F0-45d4-85FB-DB346FD1AE22}
 */
 
-description = "FANUC-Modded 0i-MD (1304) No Pitch";
+description = "FANUC-Modded 0i-MD (1304) No P, dwell time values";
 vendor = "Fanuc 0i-MD";
 vendorUrl = "http://www.fanuc.com";
 legal = "Copyright (C) 2012-2021 by Autodesk, Inc.";
