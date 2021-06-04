@@ -103,3 +103,4 @@ case COMMAND_TOOL_MEASURE:
 - Tool by tool tolerance U code for presetter command.
 - Optional Presetter feed control based on individual tool.
 - Tool return to a designated home location.
+- Cleanup Userdefined section for my context and remvoing unused settings.
