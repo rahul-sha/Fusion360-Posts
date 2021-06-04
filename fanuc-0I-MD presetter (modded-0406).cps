@@ -15,7 +15,7 @@
 
 description = "FANUC-Modded 0i-MD (0406) Tool Presetter, M65, Tx, Bx, optional U global, No Pitch";
 vendor = "Fanuc 0i-MD";
-vendorUrl = "http://www.fanuc.com";
+vendorUrl = "https://www.fanuc.com";
 legal = "Copyright (C) 2012-2021 by Autodesk, Inc.";
 certificationLevel = 2;
 minimumRevision = 45702;
