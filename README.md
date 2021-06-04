@@ -19,13 +19,13 @@ skipBlock = !insertToolCall;
     //Added tool description and moved around M03 code for desired effect.
     writeBlock("\n" + "N"+ sequenceNumber +"\n"+"T" + toolFormat.format(tool.number), mFormat.format(6),"("+ xyzFormat.format(tool.diameter) +" "
     + getToolTypeName(tool.type)+")\n");
-    /** Added sequence number increment. Do not use the sequence number setting */
-    /**Moving this operation comment after tool change */
+    //Added sequence number increment. Do not use the sequence number setting
+    //Moving this operation comment after tool change
     sequenceNumber += 1;
     if (hasParameter("operation-comment")) {
       var comment = getParameter("operation-comment");
       if (comment && ((comment !== lastOperationComment) || !patternIsActive || insertToolCall)) {
-        /**writeln("");*/ /** Removed the line from making additional line */
+        //writeln(""); Removed the line from making additional line
         writeComment(comment);
         lastOperationComment = comment;
       } else if (!patternIsActive || insertToolCall) {
@@ -36,8 +36,8 @@ skipBlock = !insertToolCall;
     }
 
     if (tool.comment) {
-      /**Remve the need for tool comment all together */
-      /**writeComment(tool.comment);*/
+      //Remve the need for tool comment all together
+      //writeComment(tool.comment);
     }
 ```
 ---
