@@ -14,3 +14,7 @@ For fanuc-0I-MD (modded-2403), Here are the changes made to the generic fanuc po
 
 For fanuc-0I-MD (modded-1304),
 - Removed P or dwell time value from tapping and drill operations due to personal preference.
+
+For fanuc-0I-MD presetter (modded-0406),
+- Added Presetter commands, M65, corresponding tool number and B-code when using **manual nc Measure tool** command.
+- Optional global tolerance U code in microns through the options.
