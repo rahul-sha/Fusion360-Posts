@@ -3,7 +3,7 @@
   All rights reserved.
 
   Modded by: Rahul Sharma
-  $Date: 2021-04-13$
+  $Date: 2021-08-19$
 
   FANUC post processor configuration.
 
@@ -13,14 +13,14 @@
   FORKID {04622D27-72F0-45d4-85FB-DB346FD1AE22}
 */
 
-description = "FANUC-Modded 0i-MD (1304) No P, dwell time values";
+description = "FANUC-Modded 0i-MD (1908) No P, dwell time values";
 vendor = "Fanuc 0i-MD";
 vendorUrl = "http://www.fanuc.com";
 legal = "Copyright (C) 2012-2021 by Autodesk, Inc.";
 certificationLevel = 2;
 minimumRevision = 45702;
 
-longDescription = "Generic post for Fanuc. Modded for Fanuc 0i-MD. Dated 24th March 2021";
+longDescription = "Generic post for Fanuc. Modded for Fanuc 0i-MD. Reset to Home position every tool change Dated 19th August 2021";
 
 extension = "nc";
 programNameIsInteger = true;
