@@ -1427,10 +1427,19 @@ function onSection() {
     }
 
     skipBlock = !insertToolCall;
-    /**writeBlock("N"+ sequenceNumber +"\n"+"T" + toolFormat.format(tool.number), mFormat.format(6));*/
+    // original block --- writeBlock("N"+ sequenceNumber +"\n"+"T" + toolFormat.format(tool.number), mFormat.format(6));*/
     /**Added tool description and moved around M03 code for desired effect */
-    writeBlock("\n" + "N"+ sequenceNumber +"\n"+"T" + toolFormat.format(tool.number), mFormat.format(6),"("+ xyzFormat.format(tool.diameter) +" "
+    //  to add G28 G91 Z0 after sequence number
+
+
+
+    writeBlock("\n" +
+    "N"+ sequenceNumber +"\n"+
+    gFormat.format(28) + " " + gAbsIncModal.format(91) + " " + "Z0. " + "\n" +
+    "T" + toolFormat.format(tool.number), mFormat.format(6),"("+ xyzFormat.format(tool.diameter) +" "
     + getToolTypeName(tool.type)+")\n");
+
+
     /** Added sequence number increment. Do not use the sequence number setting */
     /**Moving this operation comment after tool change */
     sequenceNumber += 1;
