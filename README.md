@@ -4,13 +4,10 @@ Collection of Posts I use in Fusion 360. So far only have for fanuc 0i-MD.
 
 Here are the changes made to the generic fanuc post from Fusion 360 Library:
 
-For fanuc-0I-MD (modded-2403).
 - Program name in the next line.
 - Time Stamp for when the file is post.
 - Simplified Description of tool list.
 - Sequence numbers according to tool change.
-- M09, M01 occur before the tool change and the next operation.
-- Removed tool comment and instead use tool type as an indicator for each operation.
 
 For Sequence numbers according to tool change:
 
@@ -35,16 +32,9 @@ skipBlock = !insertToolCall;
       writeln("");
     }
 
-    if (tool.comment) {
-      //Remve the need for tool comment all together
-      //writeComment(tool.comment);
-    }
 ```
 ---
-For fanuc-0I-MD (modded-1304),
-- Removed P or dwell time value from tapping and drill operations due to personal preference.
----
-For fanuc-0I-MD presetter (modded-0406),
+For presetter (modded-0406),
 
 _Using [Metrol TM26D](https://metrol-europe.com/tm26d/) touch type presetter._
 - Added Presetter commands, M65, corresponding tool number and B-code when using **manual nc Measure tool** command.
@@ -103,4 +93,3 @@ case COMMAND_TOOL_MEASURE:
 - Tool by tool tolerance U code for presetter command.
 - Optional Presetter feed control based on individual tool.
 - Tool return to a designated home location.
-- Cleanup Userdefined section for my context and remvoing unused settings.
